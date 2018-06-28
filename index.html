@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Boleto JS</title>
+    </head>
+    <body class="content">
+        <h1>Bankslip generator number</h1>
+        <p><b>Número original:</b></p>
+        <p id="original_number">23797404300001240200448056168623793601105800</p>
+        <p><b>Número tratado</b></p>
+        <p id="generated_number"></p>
+        <script src="boleto.js"></script>
+        <script >
+            var original_number = document.getElementById("original_number").textContent;
+            document.getElementById("generated_number").textContent = Bankslip.parse(original_number);
+        </script>
+    </body>
+</html>
